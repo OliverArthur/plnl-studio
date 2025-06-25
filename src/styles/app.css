@@ -1,0 +1,116 @@
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #F5F3F1;
+  background-image: radial-gradient(rgba(0,0,0,0.08) 1px, transparent 0);
+  background-size: 16px 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--p-neutral-900);
+  color: var(--p-neutral-50);
+}
+
+a {
+  text-decoration: none;
+  color: var(--p-neutral-900);
+  font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, article, aside, nav, section {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.dark-mode-on {
+  body {
+    background-color: var(--p-surface-950);
+  }
+}
+
+[data-v-app] {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: 1rem;
+}
+
+.p-component,
+.p-componet * {
+  font-family: "Roboto", sans-serif;
+}
+
+input, textarea, select {
+  background-color: transparent;
+  width: 100%;
+}
+
+.p-inputtext,
+.p-password {
+  background-color: transparent;
+  width: 100%;
+}
+
+.p-tooltip {
+  font-size: 12px;
+}
+
+h1 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;      /* 32px */
+  line-height: 2.5rem;  /* 40px */
+  letter-spacing: 0;
+  margin-block: 0.67em;
+}
+
+h2 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;    /* 24px */
+  line-height: 2rem;    /* 32px */
+  letter-spacing: 0;
+  margin-block: 0.75em;
+}
+
+h3 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;   /* 20px */
+  line-height: 1.75rem; /* 28px */
+  letter-spacing: 0;
+  margin-block: 0.75em;
+}
+
+h4 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  letter-spacing: 0;
+  margin-block: 0.75em;
+}
+
+h5 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0;
+  margin-block: 0.75em;
+}

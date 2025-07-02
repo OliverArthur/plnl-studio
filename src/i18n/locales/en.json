@@ -1,0 +1,16 @@
+{
+  "navigation": {
+    "menu": {
+      "item_one": "Home",
+      "item_two": "Work",
+      "item_three": "About",
+      "item_four": "Services",
+      "item_five": "Press",
+      "item_six": "Contact"
+    },
+    "language_switcher": "Change language"
+  },
+  "home": {
+    "hero": "We design through dialogue — responding to people, place, and materials. Each project is rooted in its context, shaped by sustainable thinking, and built with honest,enduring materials."
+  }
+}

@@ -3,10 +3,10 @@
     <section class="masonry-grid" aria-label="Featured projects and introduction">
       <article class="grid-item">
         <div class="app-logo">
-          <img src="@/assets/logo.svg" alt="PLNL Studio Logo" />
+          <img src="@/assets/PLNL%20Logo.png" alt="PLNL Studio Logo"/>
         </div>
         <p class="page-description">
-          Welcome to PLNL Studio, an independent architecture practice focused on creating thoughtful, sustainable, and innovative spaces. As a solo practitioner, I bring a personal touch to every project, ensuring direct communication and attention to detail throughout the design process.
+          {{ $t('home.hero') }}
         </p>
       </article>
       <article class="grid-item">
@@ -18,9 +18,9 @@
       </article>
       <article class="grid-item">
         <img
-            src="@/assets/DSCF0996%20Pano%20Edit.jpg"
-            alt="Modern architectural building with glass facade"
-            loading="lazy"
+          src="@/assets/DSCF0996%20Pano%20Edit.jpg"
+          alt="Modern architectural building with glass facade"
+          loading="lazy"
         />
       </article>
       <article class="grid-item">
@@ -42,7 +42,7 @@
           <h2>Coming Soon</h2>
           <p>Check back soon for more information</p>
         </div>
-        <Button label="Contact Us" class="carbon-btn" aria-label="Contact PLNL Studio" />
+        <Button label="Contact Us" class="carbon-btn" aria-label="Contact PLNL Studio"/>
       </article>
     </section>
   </div>
@@ -139,7 +139,7 @@ import Button from 'primevue/button'
 }
 
 .app-logo {
-  width: func.px-to-rem(280);
+  width: func.px-to-rem(300);
   margin-bottom: func.px-to-rem(32);
 
   img {

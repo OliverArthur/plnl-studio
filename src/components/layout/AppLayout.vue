@@ -8,7 +8,7 @@
             @click="isOpen = !isOpen"
             aria-haspopup="true"
             :aria-expanded="isOpen"
-            v-tooltip.bottom="'Change language'"
+            v-tooltip.bottom="$t('navigation.language_switcher')"
         >
           {{ selected }}
         </Button>
@@ -33,24 +33,28 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import {ref, computed, watch} from 'vue'
+import {useI18n} from 'vue-i18n'
 import AppHeader from '@/components/header/AppHeader.vue'
 import Button from 'primevue/button'
 
 enum Language {
-  NL = 'NL',
-  PL = 'PL',
-  EN = 'EN'
+  EN = 'EN',
+  NL = 'NL'
 }
 
-const selectedLanguage = ref<Language>(Language.NL)
+const {locale} = useI18n()
+
+const selectedLanguage = ref<Language>(Language.EN)
 const isOpen = ref(false)
 const selected = computed<string>(() => selectedLanguage.value.toUpperCase())
 
 function changeLanguage(lang: Language) {
-  selectedLanguage.value = Language[lang]
+  selectedLanguage.value = Language[lang] ?? Language.EN
   isOpen.value = false
 }
+
+watch(selectedLanguage, (newLocale: Language) => locale.value = newLocale.toLowerCase())
 
 </script>
 

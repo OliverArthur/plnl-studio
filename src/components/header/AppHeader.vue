@@ -1,8 +1,11 @@
 <template>
-    <header :class="{ 'sticky-header': isSticky, 'header-hidden': !isSticky }">
+    <header :class=" {
+                'sticky-header': isSticky,
+                'header-hidden': !isSticky
+            }">
         <div class="container justify-content-between align-items-center">
-            <div class="logo">
-              <img src="@/assets/small-logo.svg" alt="PLNL Studio Logo" />
+            <div class="logo" :class="isLogoHidden">
+                <img src="@/assets/plnl-logo.png" alt="PLNL Studio Logo"/>
             </div>
             <div class="header-content">
                 <nav class="header-menu">
@@ -16,7 +19,7 @@
                     </ul>
                 </nav>
                 <div class="action">
-                    <slot name="action" />
+                    <slot name="action"/>
                 </div>
             </div>
         </div>
@@ -24,45 +27,53 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import {ref, onMounted, onUnmounted, computed} from 'vue'
+import {useI18n} from 'vue-i18n'
 
-// Use shallowRef for better performance with large objects
-const scrollThreshold: number = 100
+import type {MenuItem} from '@/types'
+
+const SCROLL_THRESHOLD: number = 100
+
+const {t} = useI18n()
+
 const isSticky = ref<boolean>(false)
 
-// Define menu items as a constant to avoid reactivity overhead
-const menuItems = [
+const isLogoHidden = computed<string>(() => {
+    return isSticky.value ? '' : 'is-hidden'
+})
+
+const menuItems = computed<MenuItem[]>(() => [
     {
-        label: 'Home',
+        label: t('navigation.menu.item_one'),
         icon: 'pi pi-home',
         to: '/'
     },
     {
-      label: 'Work',
-      icon: 'pi pi-briefcase',
-      to: '/projects'
+        label: t('navigation.menu.item_two'),
+        icon: 'pi pi-briefcase',
+        to: '/projects'
     },
     {
-        label: 'About',
+        label: t('navigation.menu.item_three'),
         icon: 'pi pi-info',
         to: '/about'
     },
     {
-      label: 'Services',
-      icon: 'pi pi-briefcase',
-      to: '/services'
+        label: t('navigation.menu.item_four'),
+        icon: 'pi pi-briefcase',
+        to: '/services'
     },
     {
-      label: 'Press',
-      icon: 'pi pi-briefcase',
-      to: '/press-awards'
+        label: t('navigation.menu.item_five'),
+        icon: 'pi pi-briefcase',
+        to: '/press-awards'
     },
     {
-        label: 'Contact',
+        label: t('navigation.menu.item_six'),
         icon: 'pi pi-phone',
         to: '/contact'
     }
-]
+])
 
 // Use throttled scroll handler for better performance
 let ticking = false
@@ -70,7 +81,7 @@ const handleScroll = (): void => {
     if (!ticking) {
         window.requestAnimationFrame(() => {
             const currentScrollPosition = window.scrollY
-            isSticky.value = currentScrollPosition > scrollThreshold
+            isSticky.value = currentScrollPosition > SCROLL_THRESHOLD
             ticking = false
         })
         ticking = true
@@ -94,7 +105,7 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: func.px-to-rem(16) func.px-to-rem(32);
+        padding: func.px-to-rem(4) func.px-to-rem(32);
 
         &.justify-content-between {
             justify-content: space-between;
@@ -144,6 +155,14 @@ header {
                                 font-size: 1rem;
                             }
                         }
+
+                        &:hover {
+                            background-color: #C06C5B;
+                            border-radius: 4px;
+                            a {
+                                color: #ffffff;
+                            }
+                        }
                     }
                 }
             }
@@ -176,7 +195,7 @@ header {
 }
 
 .router-link-exact-active {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .logo {
@@ -185,6 +204,12 @@ header {
     img {
         width: 100%;
         height: auto;
+    }
+
+    &.is-hidden {
+        img {
+            display: none;
+        }
     }
 }
 </style>

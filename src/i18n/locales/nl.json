@@ -1,0 +1,16 @@
+{
+  "navigation": {
+    "menu": {
+      "item_one": "Home",
+      "item_two": "Werk",
+      "item_three": "Over",
+      "item_four": "Diensten",
+      "item_five": "Pers",
+      "item_six": "Contact"
+    },
+    "language_switcher": "Taal wijzigen"
+  },
+  "home": {
+    "hero": "Wij ontwerpen in dialoog — in wisselwerking met mensen, plek\nen materialen. Elk project is geworteld in zijn context, gevormd door duurzaam denken en gebouwd met eerlijke, blijvende materialen."
+  }
+}

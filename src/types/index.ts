@@ -4,3 +4,9 @@ export interface ContactForm {
   phone?: string;
   message: string;
 }
+
+export interface MenuItem {
+  label: string;
+  icon?: string;
+  to: string;
+}

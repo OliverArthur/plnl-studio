@@ -12,5 +12,43 @@
   },
   "home": {
     "hero": "Wij ontwerpen in dialoog — in wisselwerking met mensen, plek\nen materialen. Elk project is geworteld in zijn context, gevormd door duurzaam denken en gebouwd met eerlijke, blijvende materialen."
+  },
+  "about": {
+    "plnl": {
+      "title": "Over PLNLstudio",
+      "subtitle_one": "What we do",
+      "content_one": {
+        "paragraph_one": "PLNLstudio richt zich op milieubewuste en kostenefficiënte oplossingen. Wij hechten waarde aan ruimtelijke helderheid, tijdloze vormen en materialen die voorzichzelf spreken. Ons werk zoekt naar een balans tussen gedurfd ontwerp, eenvoud en een sterk gevoel voor plek.",
+        "paragraph_two": "Het studio werkt materiaalgericht, met een toewijding aan de waarheid en integriteit van het materiaal. De duurzaamheid van zowel het concept als het materiaal weerspiegelt de benadering van PLNLstudio ten aanzien van duurzaamheid—onderzocht via het gebruik van biogebaseerde materialen en principes van de circulaire economie.",
+        "paragraph_three": "Wij zijn gespecialiseerd in het renoveren van woningen, transformaties van gebouwen uit de 20e eeuw, maatwerk commerciële interieurs en het ontwerpen van meubels en objecten. Onze projecten variëren in schaal, maar elk is geworteld in zijn context en gevormd door de behoeften van de mensen die er gebruik van maken."
+      },
+      "subtitle_two": "Who we are",
+      "content_two": {
+        "paragraph_one": "PLNLstudio is een ontwerpbureau opgericht door Magda Sakowicz, gevestigd in Rotterdam en actief in zowel Nederland als internationaal.",
+        "paragraph_two": "Hoewel het bureau wordt geleid door één persoon, is elk project een samenwerking. PLNLstudio werkt nauw samen met andere ontwerpers, kunstenaars, vakmensen, constructeurs en aannemers om een soepel en doordacht proces te garanderen—van concept tot oplevering, met aandacht voor elk detail.",
+        "paragraph_three": "Wij werken momenteel samen met:",
+        "paragraph_four": "En naarmate ons werk zich ontwikkelt, groeit ook ons netwerk van creatieve partners."
+      },
+      "subtitle_three": "How We Work",
+      "content_three": {
+        "paragraph_one": "Wij geloven dat goede architectuur begint bij de mensen die ervan gebruik zullen maken. Daarom is ons proces geworteld in dialoog en co-creatie. We beginnen met vragen stellen, samen ideeën verkennen en gebruiken ontwerp niet alleen als reactie op de opdracht—maar ook als middel om die opdracht te verhelderen en mee vorm te geven.",
+        "paragraph_two": "In plaats van kant-en-klare oplossingen te presenteren, werken we vanaf het begin met schetsen, fysieke maquettes en heldere, toegankelijke 3D-beelden. Deze middelen helpen om ruimtelijke ideeën op een begrijpelijke manier over te brengen—vooral voor mensen die minder vertrouwd zijn met technische tekeningen. Ze nodigen uit tot reflectie, betrokkenheid en zinvolle input in elke fase van het proces.",
+        "paragraph_three": "We ontwikkelen meerdere ontwerpvarianten, gebaseerd op de locatie, de geschiedenis en de ambities van iedereen die betrokken is. Deze alternatieven zetten aan tot gesprek. Feedback helpt waarden, prioriteiten en mogelijke knelpunten bloot te leggen — en vormt de gedeelde basis van waaruit het ontwerp zich verder ontwikkelt.",
+        "paragraph_four": "Naarmate het project vordert, vertalen we ideeën naar meer gedetailleerde en realistische visualisaties die vorm, materialiteit en sfeer duidelijk communiceren. We delen ook fysieke materiaalstalen, zodat niets aan de verbeelding wordt overgelaten.",
+        "paragraph_five": "We begrijpen dat bouwen complex is. Onze rol is om opdrachtgevers door die complexiteit te begeleiden met creativiteit, helderheid en zorg — terwijl we trouw blijven aan de oorspronkelijke visie.",
+        "paragraph_six": "Wij geloven dat het proces net zo doordacht en betekenisvol moet zijn als het eindresultaat. Dat betekent sterke relaties opbouwen, open communiceren en architectuur creëren die werkelijk verbonden is met de mensen en de plekken waarvoor ze gemaakt is."
+      }
+    }
+  },
+  "magda": {
+    "title": "Over Magda Sakowicz",
+    "content": {
+      "paragraph_one": "Magda werkte bij gerenommeerde bureaus in Warschau, Houston, Madrid, Londen en Rotterdam.",
+      "paragraph_two": "In de loop der jaren leidde ze projecten in uiteenlopende sectoren — van woningbouw en kantoren tot scholen, ziekenhuizen en hotels, evenals kleinschalige interieurprojecten, zowel privé als commercieel.",
+      "paragraph_three": "Ze was betrokken bij alle fasen van het proces — van het eerste ontwerp tot de uitvoering op de bouwplaats — en deed ruime ervaring op als uitvoerend architect.",
+      "paragraph_four": "Wonen en werken in verschillende landen gaf haar een bredere, meer holistische kijk op architectuur. Tegelijkertijd groeide haar bewustzijn van de ecologische impact van ontwerp en het belang van hoogwaardige, duurzame materialen.",
+      "paragraph_five": "In 2023 richtte Magda PLNLstudio op. De naam weerspiegelt haar traject — een verbinding tussen Polen (PL), waar ze vandaan komt, en Nederland (NL), waar ze nu woont en werkt.",
+      "paragraph_six": "Magda is een volledig bevoegde architect, geregistreerd bij het Architectenregister in Nederland."
+    }
   }
 }

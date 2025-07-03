@@ -12,5 +12,42 @@
   },
   "home": {
     "hero": "We design through dialogue — responding to people, place, and materials. Each project is rooted in its context, shaped by sustainable thinking, and built with honest,enduring materials."
+  },
+  "about": {
+    "plnl": {
+      "title": "About PLNLStudio",
+      "subtitle_one": "What we do",
+      "content_one": {
+        "paragraph_one": "PLNLstudio focuses on environmentally conscious and cost-effective solutions. We value spatial clarity, timeless forms, and materials that speak for themselves. Our work seeks to balance bold design with simplicity and a strong sense of place",
+        "paragraph_two": "The studio is material-driven, designing with a commitment to material truth and integrity. The durability of both concept and material reflects PLNLstudio’s approach to sustainability, explored through the use of biobased materials and principles of the circular economy",
+        "paragraph_three": "We specialize in residential retrofits, 20th - century renovations, bespoke commercial interiors and furniture or object design. While our projects vary in scale, each one is rooted in its context and shaped by the needs of the people who use it."
+      },
+      "subtitle_two": "Who we are",
+      "content_two": {
+        "paragraph_one": "PLNLstudio is a design practice founded by Magda Sakowicz, based in Rotterdam working both across the Netherlands and internationally.",
+        "paragraph_two": "Although the studio is led by one person, every project is a teamwork. PLNLstudio collaborates closely with other designers, artists, skilled craftspeople, structural engineers, and builders to ensure a smooth and thoughtful process from concept to completion — with careful attention to every detail along the way",
+        "paragraph_three": "We are currently collaborating with:",
+        "paragraph_four": "and as our work evolves, so does our growing network of creative partners"
+      },
+      "subtitle_three": "Who we work",
+      "content_three": {
+        "paragraph_one": "We believe that good architecture begins with the people who will use it. That’s why our process is grounded in dialogue and co-creation. We start by asking questions, exploring ideas together, and using design not just to respond to the brief — but to help refine and shape it",
+        "paragraph_two": "Rather than presenting fixed solutions, we work with sketches, physical models, and clear, accessible 3D visuals from the very beginning. These tools help communicate spatial ideas in a way that’s easy to understand — especially for those less familiar with architectural drawings. They invite reflection, engagement, and meaningful input at every stag",
+        "paragraph_three": "We develop multiple design directions, informed by the site, its history, and the ambitions of everyone involved. These alternatives spark conversation. Feedback helps uncover values, priorities, and potential challenges — building a shared foundation for the design to evolve from",
+        "paragraph_four": "As the project develops, we translate ideas into more detailed and realistic visuals that clearly communicate form, materiality, and atmosphere. We also share physical material samples, ensuring that nothing is left to the imagination",
+        "paragraph_five": "We understand that building is complex. Our role is to guide clients through that complexity with creativity, clarity, and care — while staying true to the original vision",
+        "paragraph_six": "We believe the process should be just as thoughtful and rewarding as the final result. That means building strong relationships, communicating openly, and creating architecture that feels genuinely connected to the people and places it’s made for"
+      }
+    },
+    "magda": {
+      "title": "About Magda Sakowicz",
+      "content": {
+        "paragraph_one": "Magda worked in renowned offices across Warsaw, Houston, Madrid, London, and Rotterdam.",
+        "paragraph_two": "Over the years, she has led projects across a wide range of sectors — from housing and offices to schools, hospitals, and hotels, as well as smaller-scale interior projects, both private and commercial. She has been involved in every stage of the process, from early design to on-site construction, and has gained extensive experience as a site supervisor.",
+        "paragraph_three": "Living and working in different countries has allowed her to approach architecture from a broader, more holistic perspective. It has also deepened her awareness of the environmental impact of design and the importance of using high-quality, sustainable materials.",
+        "paragraph_four": "In 2023, Magda established PLNLstudio. The name reflects her journey — connecting Poland (PL), where she’s from, with the Netherlands (NL), where she lives and works today.",
+        "paragraph_five": "Magda is a fully qualified architect, registered with Het Architectenregister in the Netherlands."
+      }
+    }
   }
 }

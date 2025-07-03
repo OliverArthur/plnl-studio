@@ -8,7 +8,7 @@
             @click="isOpen = !isOpen"
             aria-haspopup="true"
             :aria-expanded="isOpen"
-            v-tooltip.bottom="$t('navigation.language_switcher')"
+            v-tooltip.left="$t('navigation.language_switcher')"
         >
           {{ selected }}
         </Button>

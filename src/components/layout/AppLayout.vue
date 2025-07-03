@@ -45,7 +45,13 @@ enum Language {
 
 const {locale} = useI18n()
 
-const selectedLanguage = ref<Language>(Language.EN)
+const getUserLanguage = (): Language => {
+  if (typeof navigator === 'undefined') return Language.EN
+  const lang = navigator.language.split('-')[0].toUpperCase()
+  return lang === 'EN' ? Language.EN : Language.NL
+}
+
+const selectedLanguage = ref<Language>(getUserLanguage())
 const isOpen = ref(false)
 const selected = computed<string>(() => selectedLanguage.value.toUpperCase())
 

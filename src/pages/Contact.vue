@@ -1,329 +1,114 @@
 <template>
   <section aria-labelledby="contact-info-heading" class="contact-page">
     <div class="contact-page__container">
-      <div class="app--grid">
-        <Card class="app--grid__item contact-info-section">
-          <template #title>
-            <h2 id="contact-info-heading" class="app--type-heading-02">
-              Contact Information
-            </h2>
-          </template>
-          <template #content>
-            <address class="app--type-body-long-01 contact-address">
-              <ul class="app--list--unordered contact-list">
-                <li class="contact-list__item">
-                  <span class="app--label"><strong>Email:</strong></span>
-                  <a href="mailto:contact@plnlstudio.com" class="app--link"
-                    >contact@plnlstudio.com</a
-                  >
-                </li>
-                <li class="contact-list__item">
-                  <span class="app--label"><strong>Phone:</strong></span>
-                  <a href="tel:+1234567890" class="app--link"
-                    >+31 (0) 6 21353015</a
-                  >
-                </li>
-                <li class="contact-list__item">
-                  <span class="app--label"><strong>Address:</strong></span>
-                  <span>Jensuistraat 21, 3035VB Rotterdam</span>
-                </li>
-              </ul>
-            </address>
-          </template>
-        </Card>
-        <Card class="app--grid__item contact-form-section">
-          <template #title>
-            <h2 id="contact-form-heading" class="app--type-heading-02">
-              Send Us a Message
-            </h2>
-          </template>
-          <template #content>
-            <Form
-              v-slot="$form"
-              :initial-values="form"
-              :resolver="resolver"
-              @submit="handleSubmit"
-              class="contact-form"
-            >
-              <FormControl>
-                <FloatLabel variant="on">
-                  <InputText
-                    id="name"
-                    name="name"
-                    type="text"
-                    class="app--text-input"
-                    variant="filled"
-                    size="large"
-                    required
-                    autocomplete="name"
-                  />
-                  <label for="name" class="app--label">Name</label>
-                </FloatLabel>
-                <Message
-                  v-if="$form.name?.invalid"
-                  severity="error"
-                  size="small"
-                  variant="simple"
-                  class="app--form-error-message"
-                >
-                  <span v-for="error in $form.name.errors" :key="error.message">
-                    {{ error.message }}
-                  </span>
-                </Message>
-              </FormControl>
-              <FormControl>
-                <FloatLabel variant="on">
-                  <InputText
-                    id="email"
-                    name="email"
-                    type="email"
-                    class="app--text-input"
-                    variant="filled"
-                    size="large"
-                    required
-                    autocomplete="email"
-                  />
-                  <label for="email" class="app--label">Email</label>
-                </FloatLabel>
-                <Message
-                  v-if="$form.email?.invalid"
-                  severity="error"
-                  size="small"
-                  variant="simple"
-                  class="app--form-error-message"
-                >
-                  <span
-                    v-for="error in $form.email.errors"
-                    :key="error.message"
-                  >
-                    {{ error.message }}
-                  </span>
-                </Message>
-              </FormControl>
-              <FormControl>
-                <FloatLabel variant="on">
-                  <InputText
-                    id="pnone"
-                    namd="phone"
-                    type="tel"
-                    class="app--text-input"
-                    variant="filled"
-                    size="large"
-                    autocomplete="phone"
-                  />
-                  <label for="phone" class="app--label">Phone</label>
-                </FloatLabel>
-              </FormControl>
-              <FormControl>
-                <FloatLabel variant="on">
-                  <Textarea
-                    id="message"
-                    name="message"
-                    class="app--text-area"
-                    variant="filled"
-                    size="large"
-                    required
-                    autocomplete="message"
-                  />
-                  <label for="message" class="app--label">Message</label>
-                </FloatLabel>
-                <Message
-                  v-if="$form.message?.invalid"
-                  severity="error"
-                  size="small"
-                  variant="simple"
-                  class="app--form-error-message"
-                >
-                  <span
-                    v-for="error in $form.message.errors"
-                    :key="error.message"
-                  >
-                    {{ error.message }}
-                  </span>
-                </Message>
-              </FormControl>
-              <div class="app--btn-group">
-                <Button
-                  type="button"
-                  label="Clear"
-                  class="app--btn app--btn--secondary carbon-btn"
-                />
-                <Button
-                  type="submit"
-                  label="Send"
-                  class="app--btn app--btn--primary carbon-btn"
-                />
-              </div>
-            </Form>
-          </template>
-        </Card>
+      <div class="contact-page__header">
+        <h2 id="contact-info-heading" class="app--type-heading-02">{{ $t('contact.title') }}</h2>
+        <p class="app--type-body-long-01">{{ $t('contact.subtitle') }}</p>
       </div>
+
+      <address class="contact-info">
+        <ul class="contact-info__list">
+          <li class="contact-info__item">
+            <span class="contact-info__label">{{ $t('contact.email.label') }}</span>
+            <a :href="'mailto:' + $t('contact.email.value')" class="app--link">{{
+              $t('contact.email.value')
+            }}</a>
+          </li>
+          <li class="contact-info__item">
+            <span class="contact-info__label">{{ $t('contact.phone.label') }}</span>
+            <a :href="'tel:' + $t('contact.phone.value')" class="app--link">{{
+              $t('contact.phone.value')
+            }}</a>
+          </li>
+          <li class="contact-info__item">
+            <span class="contact-info__label">{{ $t('contact.address.label') }}</span>
+            <span class="contact-info__value">{{ $t('contact.address.value') }}</span>
+          </li>
+        </ul>
+      </address>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { z } from "zod";
-import { Form } from "@primevue/forms";
-import { zodResolver } from "@primevue/forms/resolvers/zod";
-import Button from "primevue/button";
-import Message from "primevue/message";
-import InputText from "primevue/inputtext";
-import Textarea from "primevue/textarea";
-import FloatLabel from "primevue/floatlabel";
-import Card from "primevue/card";
-import FormControl from "@/components/form-control/FormControl.vue";
-import type { ContactForm } from "@/types";
+import { useI18n } from 'vue-i18n'
 
-const form = ref<ContactForm>({
-  fullName: "",
-  email: "",
-  phone: "",
-  message: "",
-});
-
-const resolver = zodResolver(
-  z.object({
-    fullName: z.string().min(1, { message: "Full name is required" }),
-    email: z.string().email({ message: "Invalid email address" }),
-    phone: z.string().optional(),
-    message: z.string().min(1, { message: "Message is required" }),
-  })
-);
-
-function handleSubmit() {}
+const { t } = useI18n()
 </script>
 
 <style lang="scss" scoped>
-@use "@/styles/px-to-rem.scss" as func;
+@use '@/styles/px-to-rem' as func;
+@use "sass:math";
 
-$app-border-radius: 0.25rem;
-$app-spacing-03: 1rem;
-$app-spacing-04: 1.5rem;
-$app-font-size-02: 1rem;
-$app-font-size-03: 1.125rem;
-$app-font-weight-semibold: 600;
+// Carbon Design System Tokens
+$spacing-05: func.px-to-rem(16);
+$spacing-06: func.px-to-rem(24);
+$spacing-07: func.px-to-rem(32);
+$spacing-08: func.px-to-rem(48);
 
+$text-01: var(--text-color);
+$text-02: var(--text-color-secondary);
+
+// Page layout
 .contact-page {
-  padding-block: func.px-to-rem(48);
+  padding-block: $spacing-08;
 }
-.contact-info-section {
-  margin-bottom: func.px-to-rem(32);
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-}
-.contact-address {
-  margin-top: func.px-to-rem(24);
 
-
+.contact-page__container {
+  max-width: func.px-to-rem(960);
+  padding-inline: $spacing-05;
 }
-.contact-list {
+
+.contact-page__header {
+  margin-bottom: $spacing-07;
+
+  .app--type-heading-02 {
+    margin-bottom: $spacing-05;
+  }
+}
+
+.contact-info {
+  font-style: normal;
+}
+
+.contact-info__list {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-.contact-list__item {
-  margin-bottom: func.px-to-rem(20);
   display: flex;
   flex-direction: column;
+  gap: $spacing-06;
+}
 
-  .app--link {
-    display: inline-block;
-    width: fit-content;
-  }
-}
-.contact-form-section {
-  margin-bottom: func.px-to-rem(32);
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-}
-.contact-form {
-  margin-top: func.px-to-rem(24);
+.contact-info__item {
   display: flex;
   flex-direction: column;
-  gap: $app-spacing-04;
+}
 
-  .p-inputtext,
-  .p-textarea {
-    background-color: transparent;
-  }
+.contact-info__label {
+  font-weight: 600;
+  font-size: func.px-to-rem(14);
+  line-height: 1.4;
+  margin-bottom: math.div($spacing-05, 4);
+  color: $text-02;
+}
 
-  .p-inputtext:enabled:hover,
-  .p-textarea:enabled:hover,
-  .p-inputtext:enabled:focus,
-  .p-textarea:enabled:focus {
-    background-color: transparent;
-  }
+.contact-info__value,
+.app--link {
+  font-size: func.px-to-rem(16);
+  line-height: 1.5;
+  color: $text-01;
+  text-decoration: none;
 
-  .app--text-input,
-  .app--text-area {
-    border-radius: $app-border-radius;
-    padding: $app-spacing-03;
-    font-size: $app-font-size-02;
-    transition: border-color 0.2s;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .app--label {
-    background-color: var(--p-neutral-200);
-    font-size: $app-font-size-02;
-    font-weight: $app-font-weight-semibold;
-    margin-bottom: 0.25rem;
-    display: block;
-    letter-spacing: 0.01em;
-  }
-
-  .app--form-error-message {
-    font-size: 0.875rem;
-    margin-top: 0.25rem;
-    font-weight: 400;
-    line-height: 1.3;
-    letter-spacing: 0.01em;
-  }
-
-  .carbon-btn {
-    border: none;
-    border-radius: $app-border-radius;
-    padding: 0 $app-spacing-04;
-    height: func.px-to-rem(48);
-    letter-spacing: 0.01em;
-    cursor: pointer;
+  &.app--link:hover {
+    text-decoration: underline;
   }
 }
 
-.app--grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: func.px-to-rem(32);
-}
-
-.app--btn-group {
-  display: flex;
-  flex-direction: row;
-  gap: $app-spacing-03;
-  align-items: center;
-  width: 100%;
-
-  .carbon-btn {
-    width: 100%;
-
-    &.app--btn--secondary {
-      background-color: var(--p-neutral-300);
-      color: var(--p-neutral-900);
-    }
-  }
-
-  @media (max-width: 600px) {
-    flex-direction: column;
-    align-items: stretch;
-    gap: $app-spacing-03;
-    .carbon-btn {
-      width: 100%;
-    }
+// Responsive grid for contact items
+@media (min-width: 768px) {
+  .contact-info__list {
+    grid-template-columns: repeat(auto-fit, minmax(func.px-to-rem(200), 1fr));
   }
 }
 </style>

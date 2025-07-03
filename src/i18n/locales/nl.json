@@ -50,5 +50,21 @@
         "paragraph_six": "Magda is een volledig bevoegde architect, geregistreerd bij het Architectenregister in Nederland."
       }
     }
+  },
+  "contact": {
+    "title": "PLNL studio van Magda Sakowicz",
+    "subtitle": "Architectuur- en interieurontwerpstudio gevestigd in Rotterdam",
+    "email": {
+      "label": "E-mail",
+      "value": "contact@plnlstudio.com"
+    },
+    "phone": {
+      "label": "Telefoon",
+      "value": "+31 (0) 6 21353015"
+    },
+    "address": {
+      "label": "Adres",
+      "value": "Jensuistraat 21, 3035VB Rotterdam"
+    }
   }
 }

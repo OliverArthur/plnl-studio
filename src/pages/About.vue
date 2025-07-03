@@ -64,7 +64,7 @@ $app-heading-02-font-weight: 400;
 
 $app-productive-heading-03-font-size: func.px-to-rem(20); // productive-heading-03
 $app-productive-heading-03-line-height: 1.4;
-$app-productive-heading-03-font-weight: 400;
+$app-productive-heading-03-font-weight: 700;
 
 $app-body-long-01-font-size: func.px-to-rem(16); // body-long-01
 $app-body-long-01-line-height: 1.5;
@@ -75,7 +75,6 @@ $app-body-long-01-font-weight: 400;
   padding: $spacing-06 0;
 }
 
-// Layout containers
 .about-page__container {
   width: 100%;
   max-width: func.px-to-rem(960);

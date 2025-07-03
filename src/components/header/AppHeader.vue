@@ -29,17 +29,20 @@
 <script setup lang="ts">
 import {ref, onMounted, onUnmounted, computed} from 'vue'
 import {useI18n} from 'vue-i18n'
+import { useRoute } from 'vue-router'
 
 import type {MenuItem} from '@/types'
 
 const SCROLL_THRESHOLD: number = 100
 
+const route = useRoute()
 const {t} = useI18n()
 
 const isSticky = ref<boolean>(false)
 
 const isLogoHidden = computed<string>(() => {
-    return isSticky.value ? '' : 'is-hidden'
+  const isHomePage = route.path === '/'
+  return !isSticky.value && isHomePage ? 'is-hidden' : ''
 })
 
 const menuItems = computed<MenuItem[]>(() => [

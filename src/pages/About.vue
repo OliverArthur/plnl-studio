@@ -73,6 +73,11 @@ $app-body-long-01-font-weight: 400;
 // Base page styling
 .about-page {
   padding: $spacing-06 0;
+  p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+  }
 }
 
 .about-page__container {
@@ -109,10 +114,6 @@ $app-body-long-01-font-weight: 400;
   font-weight: $app-body-long-01-font-weight;
   line-height: $app-body-long-01-line-height;
   letter-spacing: 0.16px;
-
-  &:not(:last-child) {
-    margin-bottom: $spacing-05;
-  }
 }
 
 // List styles
